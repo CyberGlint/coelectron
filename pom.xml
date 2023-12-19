@@ -49,8 +49,9 @@
         <spring-alibaba-cloud.version>2.2.9.RELEASE</spring-alibaba-cloud.version>
         <commons-lang3.version>3.14.0</commons-lang3.version>
         <lombok.version>1.18.30</lombok.version>
-        <mybatisplus.version>3.5.4.1</mybatisplus.version>
+        <mybatisplus.version>3.5.2</mybatisplus.version>
         <mysql.version>8.0.33</mysql.version>
+        <fastjson.version>1.2.80</fastjson.version>
     </properties>
 
     <dependencyManagement>
@@ -88,6 +89,18 @@
             <!-- Mybatis-plus 启动器 -->
             <dependency>
                 <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-core</artifactId>
+                <version>${mybatisplus.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-extension</artifactId>
+                <version>${mybatisplus.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatisplus.version}</version>
             </dependency>
@@ -112,6 +125,11 @@
                 <groupId>com.cyberglint</groupId>
                 <artifactId>coelectron-mybatis-plus</artifactId>
                 <version>${cyberglint.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
