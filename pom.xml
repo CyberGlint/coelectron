@@ -4,19 +4,92 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.2.0</version>
+        <relativePath/>
+    </parent>
+
     <groupId>net.cyberglint</groupId>
     <artifactId>coelectron</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
+    <description>原子核心依赖:用于快速构建SpringBoot微服务项目</description>
+
     <packaging>pom</packaging>
+
     <modules>
         <module>coelectron-spring-boot</module>
         <module>coelectron-spring-cloud</module>
+        <module>coelectron-mybatis-plus</module>
     </modules>
 
     <properties>
+        <cyberglint.version>1.0.0-SNAPSHOT</cyberglint.version>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring-cloud.version>2023.0.0</spring-cloud.version>
+        <spring-alibaba-cloud.version>2022.0.0.0</spring-alibaba-cloud.version>
+        <commons-lang3.version>3.14.0</commons-lang3.version>
+        <lombok.version>1.18.30</lombok.version>
+        <mybatisplus.version>3.5.4.1</mybatisplus.version>
+        <mysql.version>8.0.33</mysql.version>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-alibaba-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatisplus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.cyberglint</groupId>
+                <artifactId>coelectron-spring-boot</artifactId>
+                <version>${cyberglint.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.cyberglint</groupId>
+                <artifactId>coelectron-spring-cloud</artifactId>
+                <version>${cyberglint.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.cyberglint</groupId>
+                <artifactId>coelectron-mybatis-plus</artifactId>
+                <version>${cyberglint.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>
