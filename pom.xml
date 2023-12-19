@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- 这是 Maven 项目对象模型（POM）的根元素-->
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- POM的版本 -->
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- 父项目，能够提供给子项目共同的依赖和插件管理 -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -11,23 +14,35 @@
         <relativePath/>
     </parent>
 
+    <!-- 当前项目的组ID -->
     <groupId>net.cyberglint</groupId>
+
+    <!-- 当前项目的唯一标识符 -->
     <artifactId>coelectron</artifactId>
+
+    <!-- 当前版本号 -->
     <version>1.0.0-SNAPSHOT</version>
+
+    <!-- 对项目的简单描述 -->
     <description>原子核心依赖:用于快速构建SpringBoot微服务项目</description>
 
+    <!-- 项目的打包方式，此处为 pom，表示当前是一个聚合的项目 -->
     <packaging>pom</packaging>
 
+    <!-- 聚合其他模块，设定模块间的顺序 -->
     <modules>
         <module>coelectron-spring-boot</module>
         <module>coelectron-spring-cloud</module>
         <module>coelectron-mybatis-plus</module>
     </modules>
 
+    <!-- 定义项目属性 -->
     <properties>
         <cyberglint.version>1.0.0-SNAPSHOT</cyberglint.version>
+        <!-- 指定编译器版本 -->
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
+        <!-- 项目编码格式 -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring-cloud.version>2023.0.0</spring-cloud.version>
         <spring-alibaba-cloud.version>2022.0.0.0</spring-alibaba-cloud.version>
@@ -38,7 +53,9 @@
     </properties>
 
     <dependencyManagement>
+        <!-- 在该元素内部列出要在其他地方引用的所有附加依赖项，以及它们的版本 -->
         <dependencies>
+            <!-- Spring Cloud 依赖 -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -46,6 +63,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <!-- Alibaba Cloud 依赖 -->
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
@@ -53,27 +71,32 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <!-- Commons Lang3 这是一个 Java 库，增强核心 Java 功能 -->
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
                 <version>${commons-lang3.version}</version>
             </dependency>
+            <!-- Lombok 是一个 Java 库，它可以自动为您的类生成常用方法，如 getters 和 setters -->
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
                 <scope>provided</scope>
             </dependency>
+            <!-- Mybatis-plus 启动器 -->
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatisplus.version}</version>
             </dependency>
+            <!-- MySQL的JDBC驱动，用于连接MySQL数据库 -->
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql.version}</version>
             </dependency>
+            <!-- 各个模块的 Spring Boot Starter 依赖 -->
             <dependency>
                 <groupId>net.cyberglint</groupId>
                 <artifactId>coelectron-spring-boot</artifactId>

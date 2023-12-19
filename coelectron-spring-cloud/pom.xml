@@ -1,36 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- 这是 Maven 项目对象模型（POM）的根元素-->
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- POM的版本 -->
     <modelVersion>4.0.0</modelVersion>
+
+    <!-- 父项目信息 -->
     <parent>
         <groupId>net.cyberglint</groupId>
         <artifactId>coelectron</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
+    <!-- 当前项目的唯一标识符 -->
     <artifactId>coelectron-spring-cloud</artifactId>
+
+    <!-- 对项目的简单描述 -->
     <description>SpringCloud相关依赖</description>
 
+    <!-- 定义项目属性 -->
     <properties>
+        <!-- 指定编译器版本 -->
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
+        <!-- 项目编码格式 -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    
+
+    <!-- 定义项目的依赖 -->
     <dependencies>
+        <!-- Spring Cloud OpenFeign 的基本启动器 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
+
+        <!-- Alibaba Nacos 的服务发现启动器 -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
+
+        <!-- Alibaba Nacos 的配置服务启动器 -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
+
+        <!-- Lombok 是一个 Java 库，它可以自动为您的类生成常用方法，如 getters 和 setters -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
