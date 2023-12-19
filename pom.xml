@@ -96,7 +96,7 @@
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql.version}</version>
             </dependency>
-            <!-- 各个模块的 Spring Boot Starter 依赖 -->
+            <!-- coelectron -->
             <dependency>
                 <groupId>net.cyberglint</groupId>
                 <artifactId>coelectron-spring-boot</artifactId>
