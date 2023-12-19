@@ -8,7 +8,7 @@
 
     <!-- 父项目信息 -->
     <parent>
-        <groupId>net.cyberglint</groupId>
+        <groupId>com.cyberglint</groupId>
         <artifactId>coelectron</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>

@@ -15,7 +15,7 @@
     </parent>
 
     <!-- 当前项目的组ID -->
-    <groupId>net.cyberglint</groupId>
+    <groupId>com.cyberglint</groupId>
 
     <!-- 当前项目的唯一标识符 -->
     <artifactId>coelectron</artifactId>
@@ -98,21 +98,35 @@
             </dependency>
             <!-- coelectron -->
             <dependency>
-                <groupId>net.cyberglint</groupId>
+                <groupId>com.cyberglint</groupId>
                 <artifactId>coelectron-spring-boot</artifactId>
                 <version>${cyberglint.version}</version>
             </dependency>
             <dependency>
-                <groupId>net.cyberglint</groupId>
+                <groupId>com.cyberglint</groupId>
                 <artifactId>coelectron-spring-cloud</artifactId>
                 <version>${cyberglint.version}</version>
             </dependency>
             <dependency>
-                <groupId>net.cyberglint</groupId>
+                <groupId>com.cyberglint</groupId>
                 <artifactId>coelectron-mybatis-plus</artifactId>
                 <version>${cyberglint.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+
+    <distributionManagement>
+        <repository>
+            <id>central</id>
+            <name>oxygen-release</name>
+            <url>http://192.168.1.100:8081/artifactory/glint-release</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>oxygen-snapshot</name>
+            <url>http://192.168.1.100:8081/artifactory/glint-snapshot</url>
+        </snapshotRepository>
+    </distributionManagement>
 
 </project>
