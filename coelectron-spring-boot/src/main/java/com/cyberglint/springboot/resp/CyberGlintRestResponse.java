@@ -1,8 +1,10 @@
 package com.cyberglint.springboot.resp;
 
 
+
+
+import jdk.nashorn.internal.objects.annotations.Getter;
 import lombok.Data;
-import lombok.Getter;
 
 import java.util.EnumSet;
 
@@ -82,7 +84,6 @@ public class CyberGlintRestResponse<T> {
     /**
      * ResultCode枚举 - 定义 API 响应的结果码。
      */
-    @Getter
     public enum ResultCode {
         // 表示操作成功的结果码。
         SUCCESS(0),

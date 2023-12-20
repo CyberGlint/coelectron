@@ -1,8 +1,8 @@
 package com.cyberglint.springboot.exception;
 
 import com.cyberglint.springboot.resp.CyberGlintRestResponse;
-import lombok.extern.slf4j.Slf4j;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
