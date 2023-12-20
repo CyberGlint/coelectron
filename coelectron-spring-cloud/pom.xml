@@ -35,23 +35,20 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
-
         <!-- Alibaba Nacos 的服务发现启动器 -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery
+            </artifactId>
         </dependency>
-
         <!-- Alibaba Nacos 的配置服务启动器 -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
-
-        <!-- Lombok 是一个 Java 库，它可以自动为您的类生成常用方法，如 getters 和 setters -->
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
+            <groupId>com.cyberglint</groupId>
+            <artifactId>common</artifactId>
         </dependency>
     </dependencies>
 

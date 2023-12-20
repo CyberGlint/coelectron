@@ -47,11 +47,9 @@
         <springboot.version>2.3.12.RELEASE</springboot.version>
         <springcloud.version>Hoxton.SR12</springcloud.version>
         <spring-alibaba-cloud.version>2.2.9.RELEASE</spring-alibaba-cloud.version>
-        <commons-lang3.version>3.14.0</commons-lang3.version>
-        <lombok.version>1.18.30</lombok.version>
         <mybatisplus.version>3.5.2</mybatisplus.version>
         <mysql.version>8.0.33</mysql.version>
-        <fastjson.version>1.2.80</fastjson.version>
+        <common.version>1.0.0-SNAPSHOT</common.version>
     </properties>
 
     <dependencyManagement>
@@ -72,19 +70,6 @@
                 <version>${spring-alibaba-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
-            </dependency>
-            <!-- Commons Lang3 这是一个 Java 库，增强核心 Java 功能 -->
-            <dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-lang3</artifactId>
-                <version>${commons-lang3.version}</version>
-            </dependency>
-            <!-- Lombok 是一个 Java 库，它可以自动为您的类生成常用方法，如 getters 和 setters -->
-            <dependency>
-                <groupId>org.projectlombok</groupId>
-                <artifactId>lombok</artifactId>
-                <version>${lombok.version}</version>
-                <scope>provided</scope>
             </dependency>
             <!-- Mybatis-plus 启动器 -->
             <dependency>
@@ -127,9 +112,9 @@
                 <version>${cyberglint.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>fastjson</artifactId>
-                <version>${fastjson.version}</version>
+                <groupId>com.cyberglint</groupId>
+                <artifactId>common</artifactId>
+                <version>${common.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
