@@ -6,7 +6,6 @@
     <!-- POM的版本 -->
     <modelVersion>4.0.0</modelVersion>
 
-
     <!--  模块信息  -->
     <name>coelectron-mybatis-plus</name>
     <description>Quickly build the SpringBoot project mybatis-plus module</description>
@@ -33,7 +32,7 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>coelectron-mybatis-plus</artifactId>
+    <artifactId>coelectron-mybatis</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>

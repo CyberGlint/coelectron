@@ -6,15 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="coelectron-mybatis-plus" />
-        <module name="coelectron-spring-boot" />
         <module name="coelectron-spring-cloud" />
+        <module name="coelectron-spring-boot" />
+        <module name="coelectron-mybatis" />
+        <module name="coelectron-redis" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="coelectron-mybatis-plus" options="-parameters" />
+      <module name="coelectron-mybatis" options="-parameters" />
+      <module name="coelectron-redis" options="-parameters" />
       <module name="coelectron-spring-boot" options="-parameters" />
       <module name="coelectron-spring-cloud" options="-parameters" />
     </option>

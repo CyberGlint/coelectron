@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 这是 Maven 项目对象模型（POM）的根元素-->
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -41,7 +40,8 @@
     <modules>
         <module>coelectron-spring-boot</module>
         <module>coelectron-spring-cloud</module>
-        <module>coelectron-mybatis-plus</module>
+        <module>coelectron-mybatis</module>
+        <module>coelectron-redis</module>
     </modules>
 
     <properties>
@@ -101,12 +101,12 @@
             </dependency>
             <dependency>
                 <groupId>com.cyberglint</groupId>
-                <artifactId>coelectron-spring-cloud</artifactId>
+                <artifactId>coelectron-mybatis</artifactId>
                 <version>${cyberglint.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.cyberglint</groupId>
-                <artifactId>coelectron-mybatis-plus</artifactId>
+                <artifactId>coelectron-redis</artifactId>
                 <version>${cyberglint.version}</version>
             </dependency>
             <dependency>
