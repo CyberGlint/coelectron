@@ -6,37 +6,46 @@
     <!-- POM的版本 -->
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- 父项目信息 -->
+
+    <!--  模块信息  -->
+    <name>coelectron-mybatis-plus</name>
+    <description>Quickly build the SpringBoot project mybatis-plus module</description>
+    <url>https://github.com/CyberGlint/coelectron</url>
+
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>CyberGlint</id>
+            <name>shushun</name>
+            <email>496966859@qq.com</email>
+        </developer>
+    </developers>
+
     <parent>
         <groupId>com.cyberglint</groupId>
         <artifactId>coelectron</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <!-- 当前项目的唯一标识符 -->
     <artifactId>coelectron-mybatis-plus</artifactId>
 
-    <!-- 对项目的简单描述 -->
-    <description>MybatisPlus相关依赖</description>
-
-    <!-- 定义项目属性 -->
     <properties>
-        <!-- 指定编译器版本 -->
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
-        <!-- 项目编码格式 -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <!-- 定义项目的依赖 -->
     <dependencies>
-        <!-- 这是一个用于启动和整合MyBatis的启动器 -->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
         </dependency>
-
-        <!-- MySQL的JDBC驱动，用于连接MySQL数据库 -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>

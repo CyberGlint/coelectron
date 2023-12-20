@@ -6,57 +6,58 @@
     <!-- POM的版本 -->
     <modelVersion>4.0.0</modelVersion>
 
+    <!--模块信息-->
+    <name>coelectron</name>
+    <description>Quickly build a SpringBoot project</description>
+    <url>https://github.com/CyberGlint/coelectron</url>
 
-    <!-- 父项目，能够提供给子项目共同的依赖和插件管理 -->
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>CyberGlint</id>
+            <name>shushun</name>
+            <email>496966859@qq.com</email>
+        </developer>
+    </developers>
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.12.RELEASE</version>
+        <version>2.6.15</version>
         <relativePath/>
     </parent>
 
-    <!-- 当前项目的组ID -->
     <groupId>com.cyberglint</groupId>
-
-    <!-- 当前项目的唯一标识符 -->
     <artifactId>coelectron</artifactId>
-
-    <!-- 当前版本号 -->
     <version>1.0.0-SNAPSHOT</version>
-
-    <!-- 对项目的简单描述 -->
-    <description>原子核心依赖:用于快速构建SpringBoot微服务项目</description>
-
-    <!-- 项目的打包方式，此处为 pom，表示当前是一个聚合的项目 -->
     <packaging>pom</packaging>
 
-    <!-- 聚合其他模块，设定模块间的顺序 -->
     <modules>
         <module>coelectron-spring-boot</module>
         <module>coelectron-spring-cloud</module>
         <module>coelectron-mybatis-plus</module>
     </modules>
 
-    <!-- 定义项目属性 -->
     <properties>
         <cyberglint.version>1.0.0-SNAPSHOT</cyberglint.version>
-        <!-- 指定编译器版本 -->
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
-        <!-- 项目编码格式 -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <springboot.version>2.6.4</springboot.version>
         <springcloud.version>2021.0.9</springcloud.version>
         <spring-alibaba-cloud.version>2021.0.4.0</spring-alibaba-cloud.version>
-        <mybatisplus.version>3.5.2</mybatisplus.version>
+        <mybatisplus.version>3.5.3.2</mybatisplus.version>
         <mysql.version>8.0.33</mysql.version>
         <common.version>1.0.0-SNAPSHOT</common.version>
     </properties>
 
     <dependencyManagement>
-        <!-- 在该元素内部列出要在其他地方引用的所有附加依赖项，以及它们的版本 -->
         <dependencies>
-            <!-- Spring Cloud 依赖 -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -64,7 +65,6 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!-- Alibaba Cloud 依赖 -->
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
@@ -72,7 +72,6 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!-- Mybatis-plus 启动器 -->
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-core</artifactId>
@@ -90,13 +89,11 @@
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatisplus.version}</version>
             </dependency>
-            <!-- MySQL的JDBC驱动，用于连接MySQL数据库 -->
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql.version}</version>
             </dependency>
-            <!-- coelectron -->
             <dependency>
                 <groupId>com.cyberglint</groupId>
                 <artifactId>coelectron-spring-boot</artifactId>
