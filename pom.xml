@@ -47,7 +47,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <springboot.version>2.3.12.RELEASE</springboot.version>
         <springcloud.version>Hoxton.SR12</springcloud.version>
-        <spring-alibaba-cloud.version>2.2.9.RELEASE</spring-alibaba-cloud.version>
+        <spring-alibaba-cloud.version>2021.0.4.0</spring-alibaba-cloud.version>
         <mybatisplus.version>3.5.2</mybatisplus.version>
         <mysql.version>8.0.33</mysql.version>
         <common.version>1.0.0-SNAPSHOT</common.version>
