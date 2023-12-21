@@ -1,7 +1,7 @@
 package com.cyberglint.springboot.exception;
 
 
-import lombok.Getter;
+
 
 /**
  * 通用业务异常类,扩展于 RuntimeException 支持多元构造函数
