@@ -54,7 +54,7 @@
         <mybatisplus.version>3.5.4.1</mybatisplus.version>
         <mysql.version>8.0.33</mysql.version>
         <common.version>1.0.0-SNAPSHOT</common.version>
-        <logback.version>1.0.0</logback.version>
+        <logback-adapter.version>1.0.0</logback-adapter.version>
     </properties>
 
     <dependencyManagement>
@@ -123,7 +123,7 @@
             <dependency>
                 <groupId>com.alibaba.nacos</groupId>
                 <artifactId>logback-adapter</artifactId>
-                <version>${logback.version}</version>
+                <version>${logback-adapter.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
