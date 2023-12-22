@@ -1,9 +1,4 @@
 package com.cyberglint.springboot.resp;
-
-
-
-
-import jdk.nashorn.internal.objects.annotations.Getter;
 import lombok.Data;
 
 import java.util.EnumSet;
