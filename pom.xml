@@ -54,6 +54,7 @@
         <mybatisplus.version>3.5.4.1</mybatisplus.version>
         <mysql.version>8.0.33</mysql.version>
         <common.version>1.0.0-SNAPSHOT</common.version>
+        <logback.version>1.0.0</logback.version>
     </properties>
 
     <dependencyManagement>
@@ -118,6 +119,11 @@
                 <groupId>com.cyberglint</groupId>
                 <artifactId>common</artifactId>
                 <version>${common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.nacos</groupId>
+                <artifactId>logback-adapter</artifactId>
+                <version>${lombok.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

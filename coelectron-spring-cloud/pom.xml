@@ -57,6 +57,11 @@
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
         <dependency>
+            <groupId>com.alibaba.nacos</groupId>
+            <artifactId>logback-adapter</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
             <groupId>com.cyberglint</groupId>
             <artifactId>common</artifactId>
         </dependency>
