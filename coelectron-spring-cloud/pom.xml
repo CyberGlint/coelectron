@@ -59,7 +59,6 @@
         <dependency>
             <groupId>com.alibaba.nacos</groupId>
             <artifactId>logback-adapter</artifactId>
-            <version>1.0.0</version>
         </dependency>
         <dependency>
             <groupId>com.cyberglint</groupId>
