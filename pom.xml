@@ -28,7 +28,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.0.13</version>
+        <version>3.2.0</version>
         <relativePath/>
     </parent>
 
@@ -49,7 +49,7 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <springcloud.version>2022.0.0</springcloud.version>
+        <springcloud.version>2023.0.0</springcloud.version>
         <spring-alibaba-cloud.version>2022.0.0.0</spring-alibaba-cloud.version>
         <mybatisplus.version>3.5.4.1</mybatisplus.version>
         <mysql.version>8.0.33</mysql.version>
