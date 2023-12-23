@@ -27,5 +27,9 @@
             <groupId>org.redisson</groupId>
             <artifactId>redisson</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.cyberglint</groupId>
+            <artifactId>common</artifactId>
+        </dependency>
     </dependencies>
 </project>
