@@ -20,9 +20,10 @@ public class CyberGlintRedisUtil {
     
     @Resource
     private RedisTemplate<String, Object> redisTemplate;
-//
+    //
     @Autowired
     private RedissonClient redissonClient;
+    
     /**
      * 向Redis中写入数据。
      *
@@ -79,16 +80,37 @@ public class CyberGlintRedisUtil {
     /**
      * 使用分布式锁执行一个操作。
      *
-     * @param lockKey 锁的键。
-     * @param action 要执行的操作，使用 Lambda 表达式。
+     * @param lockKey     锁的键。
+     * @param action      要执行的操作，使用 Lambda 表达式。
+     * @param lockTimeout 获取锁的最大等待时间（秒）。
+     * @param leaseTime   锁的持有时间（秒），之后锁会自动释放。
      */
-    public void executeWithLock(String lockKey, Runnable action) {
+    public void executeWithLock(String lockKey, Runnable action, long lockTimeout, long leaseTime) {
         RLock lock = redissonClient.getLock(lockKey);
+        boolean isLocked = false;
+        
         try {
-            lock.lock();
-            action.run();
+            log.info("尝试获取锁-{}", lockKey);
+            isLocked = lock.tryLock(lockTimeout, leaseTime, TimeUnit.SECONDS);
+            
+            if (isLocked) {
+                log.info("成功获取锁-{}", lockKey);
+                action.run();
+                log.info("操作成功执行-{}", lockKey);
+            } else {
+                log.warn("无法获取锁-{}", lockKey);
+            }
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            log.error("获取锁时被中断-{}", lockKey, e);
+        } catch (Exception e) {
+            log.error("执行操作时出现异常-{}", lockKey, e);
+            throw e;
         } finally {
-            lock.unlock();
+            if (isLocked) {
+                lock.unlock();
+                log.info("释放锁-{}", lockKey);
+            }
         }
     }
 }
