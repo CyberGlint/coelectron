@@ -1,8 +1,9 @@
-package com.cyberglint.redis;
+package com.cyberglint.redis.util;
 
 import lombok.extern.slf4j.Slf4j;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Component;
@@ -19,7 +20,8 @@ public class CyberGlintRedisUtil {
     
     @Resource
     private RedisTemplate<String, Object> redisTemplate;
-    @Resource
+//
+    @Autowired
     private RedissonClient redissonClient;
     /**
      * 向Redis中写入数据。
@@ -35,7 +37,7 @@ public class CyberGlintRedisUtil {
             operations.set(key, value);
             result = true;
         } catch (Exception e) {
-            log.error("[REDIS-UTIL-ERROR]", e);
+            log.error("[REDIS-UTIL-ERROR-GET]", e);
         }
         return result;
     }
@@ -67,31 +69,25 @@ public class CyberGlintRedisUtil {
             redisTemplate.expire(key, expireTime, TimeUnit.SECONDS);
             result = true;
         } catch (Exception e) {
-            e.printStackTrace();
+            log.error("[REDIS-UTIL-ERROR-SET]", e);
         }
         return result;
     }
     
     
-    /**
-     * 在给定的键上获取分布式锁。
-     *
-     * @param lockKey 要锁定的键。
-     * @return Redisson 分布式锁。
-     */
-    public RLock acquireLock(String lockKey) {
-        RLock lock = redissonClient.getLock(lockKey);
-        lock.lock();
-        return lock;
-    }
     
     /**
-     * 释放分布式锁。
+     * 使用分布式锁执行一个操作。
      *
-     * @param lock 要释放的分布式锁。
+     * @param lockKey 锁的键。
+     * @param action 要执行的操作，使用 Lambda 表达式。
      */
-    public void releaseLock(RLock lock) {
-        if (lock.isLocked() && lock.isHeldByCurrentThread()) {
+    public void executeWithLock(String lockKey, Runnable action) {
+        RLock lock = redissonClient.getLock(lockKey);
+        try {
+            lock.lock();
+            action.run();
+        } finally {
             lock.unlock();
         }
     }
