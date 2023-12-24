@@ -22,7 +22,7 @@ public class CyberGlintLockSpace {
      * @param lockKey 锁的键。
      * @param action  要执行的操作，使用 Lambda 表达式。
      */
-    public void executeWithLock(
+    public void lockSpace(
             String lockKey, Runnable action,
             CyberGlintLockStrategyEnum cyberGlintLockStrategyEnum
     ) {
