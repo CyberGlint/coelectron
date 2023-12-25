@@ -114,3 +114,16 @@
 </project>
 
 ```
+
+### JVM参数配置NACOS
+```java
+-Dspring.cloud.nacos.config.import-check.enabled=false
+-Dspring.cloud.bootstrap.enabled=true
+-Dspring.cloud.nacos.config.server-addr=http://192.168.1.102:8848
+-Dspring.cloud.nacos.discovery.server-addr=http://192.168.1.102:8848
+-Dspring.cloud.nacos.config.namespace=c74ca668-eb4f-4da1-9574-0b100ea47f96
+-Dspring.cloud.nacos.discovery.namespace=c74ca668-eb4f-4da1-9574-0b100ea47f96
+-Dspring.main.allow-bean-definition-overriding=true
+-Dspring.application.name=cyberglint-member-application
+-Dspring.cloud.nacos.config.file-extension=yml
+```
