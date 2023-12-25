@@ -30,28 +30,28 @@ public class CyberGlintLockSpace {
         boolean isLocked = false;
         
         try {
-            log.info("尝试获取锁 {}", lockKey);
+            log.info("[lockSpace]尝试获取锁:{}", lockKey);
             isLocked = lock.tryLock(cyberGlintLockStrategyEnum.getLockTimeout(),
                     cyberGlintLockStrategyEnum.getLeaseTime(), TimeUnit.SECONDS
             );
             
             if (isLocked) {
-                log.info("成功获取锁 {}", lockKey);
+                log.info("[lockSpace]成功获取锁:{}", lockKey);
                 action.run();
-                log.info("操作成功执行 {}", lockKey);
+                log.info("[lockSpace]操作成功执行:{}", lockKey);
             } else {
-                log.warn("无法获取锁 {}", lockKey);
+                log.warn("[lockSpace]无法获取锁:{}", lockKey);
             }
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
-            log.error("获取锁时被中断 {}", lockKey, e);
+            log.error("[lockSpace]获取锁时被中断:{}", lockKey, e);
         } catch (Exception e) {
-            log.error("执行操作时出现异常 {}", lockKey, e);
+            log.error("[lockSpace]执行操作时出现异常:{}", lockKey, e);
             throw e;
         } finally {
             if (isLocked && lock.isHeldByCurrentThread()) {
                 lock.unlock();
-                log.info("释放锁 {}", lockKey);
+                log.info("[lockSpace]释放锁:{}", lockKey);
             }
         }
     }

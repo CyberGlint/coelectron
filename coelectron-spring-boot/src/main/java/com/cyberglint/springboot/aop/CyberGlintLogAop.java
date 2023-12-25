@@ -46,7 +46,7 @@ public class CyberGlintLogAop {
         try {
             logArguments(joinPoint.getArgs());
         } catch (Exception e) {
-            log.error("Error logging arguments: ", e);
+            log.error("[logBefore-error]:", e);
         }
     }
     
@@ -80,7 +80,7 @@ public class CyberGlintLogAop {
         try {
             log.info("request-response:{}#{}:{}", joinPoint.getSignature().getDeclaringTypeName(), joinPoint.getSignature().getName(), JSON.toJSONString(result));
         } catch (Exception e) {
-            log.error("Error logging response: ", e);
+            log.error("[logAfterReturning-error]:", e);
         }
     }
     
@@ -89,6 +89,6 @@ public class CyberGlintLogAop {
      */
     @AfterThrowing(pointcut = "controllerMethod()", throwing = "ex")
     public void logAfterThrowing(JoinPoint joinPoint, CyberGlintBizException ex) {
-        log.error("request-exception:{}#{}:{}", joinPoint.getSignature().getDeclaringTypeName(), joinPoint.getSignature().getName(), JSON.toJSONString(ex.getMessage()));
+        log.error("[logAfterThrowing-error]:{}#{}:{}", joinPoint.getSignature().getDeclaringTypeName(), joinPoint.getSignature().getName(), JSON.toJSONString(ex.getMessage()));
     }
 }

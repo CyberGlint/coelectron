@@ -80,7 +80,6 @@ public class CyberGlintExceptionCaptureCenter {
      * @return 包含错误信息的GlintRestResponse
      */
     private CyberGlintRestResponse<String> createErrorResponse(String logMessage, Exception e, String responseMessage) {
-        log.error(logMessage, e);
         return CyberGlintRestResponse.error(responseMessage);
     }
 }
