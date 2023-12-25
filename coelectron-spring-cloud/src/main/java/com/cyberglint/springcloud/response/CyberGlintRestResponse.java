@@ -1,4 +1,4 @@
-package com.cyberglint.springboot.resp;
+package com.cyberglint.springcloud.response;
 import lombok.Data;
 
 import java.util.EnumSet;
