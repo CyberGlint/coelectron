@@ -42,6 +42,7 @@
         <module>coelectron-spring-cloud</module>
         <module>coelectron-mybatis</module>
         <module>coelectron-redis</module>
+        <module>coelectron-data-object</module>
     </modules>
 
     <properties>
@@ -115,6 +116,11 @@
             <dependency>
                 <groupId>com.cyberglint</groupId>
                 <artifactId>coelectron-redis</artifactId>
+                <version>${cyberglint.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.cyberglint</groupId>
+                <artifactId>coelectron-data-object</artifactId>
                 <version>${cyberglint.version}</version>
             </dependency>
             <dependency>
