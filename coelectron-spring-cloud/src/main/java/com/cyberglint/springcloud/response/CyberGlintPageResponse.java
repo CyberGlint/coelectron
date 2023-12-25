@@ -1,4 +1,4 @@
-package com.cyberglint.springboot.page;
+package com.cyberglint.springcloud.response;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import lombok.AllArgsConstructor;
