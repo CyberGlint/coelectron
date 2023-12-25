@@ -10,7 +10,8 @@
 
 ## 使用方法
 ### 示例项目结构
-![image_1.png](image_1.png)
+![image_1.png](https://github.com/CyberGlint/doc/blob/main/Writerside/images/image_1.png?raw=true)
+
 
 
 ### 项目根依赖 SpringBoot-3.2.0-POM
