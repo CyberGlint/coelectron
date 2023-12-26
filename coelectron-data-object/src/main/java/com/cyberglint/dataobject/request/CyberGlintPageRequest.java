@@ -1,9 +1,10 @@
-package com.cyberglint.springcloud.request;
+package com.cyberglint.dataobject.request;
 
 
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import lombok.Setter;

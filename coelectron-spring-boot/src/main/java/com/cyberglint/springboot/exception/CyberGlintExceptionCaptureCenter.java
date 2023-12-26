@@ -1,8 +1,9 @@
 package com.cyberglint.springboot.exception;
 
-import com.cyberglint.springboot.resp.CyberGlintRestResponse;
 
 
+
+import com.cyberglint.dataobject.response.CyberGlintRestResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.BindingResult;
@@ -38,7 +39,7 @@ public class CyberGlintExceptionCaptureCenter {
         BindingResult bindingResult = e.getBindingResult();
         StringBuilder errorMessage = new StringBuilder();
         for (FieldError fieldError : bindingResult.getFieldErrors()) {
-            if (errorMessage.length() > 0) {
+            if (!errorMessage.isEmpty()) {
                 errorMessage.append("; ");
             }
             errorMessage.append(fieldError.getDefaultMessage());
@@ -79,7 +80,6 @@ public class CyberGlintExceptionCaptureCenter {
      * @return 包含错误信息的GlintRestResponse
      */
     private CyberGlintRestResponse<String> createErrorResponse(String logMessage, Exception e, String responseMessage) {
-        log.error(logMessage, e);
         return CyberGlintRestResponse.error(responseMessage);
     }
 }
