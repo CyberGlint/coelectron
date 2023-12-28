@@ -1,6 +1,7 @@
 
-![logo.png](https://repository-images.githubusercontent.com/733343204/c1827d3e-66d0-494d-bf3f-63ad732e1f29)
 # coelectron(原子核心模块)
+![coelectron](https://socialify.git.ci/CyberGlint/coelectron/image?description=1&descriptionEditable=&font=KoHo&forks=1&issues=1&language=1&name=1&owner=1&pattern=Circuit%20Board&pulls=1&stargazers=1&theme=Light)
+
 
 > 该模块是为了快速构建SpringBoot项目而存在
 
