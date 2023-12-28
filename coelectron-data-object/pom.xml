@@ -3,6 +3,29 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
+
+    <!--  模块信息  -->
+    <name>coelectron-data-object</name>
+    <description>Universal data body</description>
+    <url>https://github.com/CyberGlint/coelectron</url>
+
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>GEKSS5289</id>
+            <name>shushun</name>
+            <email>496966859@qq.com</email>
+        </developer>
+    </developers>
+
+
     <parent>
         <groupId>com.cyberglint</groupId>
         <artifactId>coelectron</artifactId>
