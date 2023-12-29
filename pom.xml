@@ -140,11 +140,6 @@
                 <version>${cyberglint.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.cyberglint</groupId>
-                <artifactId>common</artifactId>
-                <version>${common.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>com.alibaba.nacos</groupId>
                 <artifactId>logback-adapter</artifactId>
                 <version>${logback-adapter.version}</version>
