@@ -51,7 +51,7 @@
         </dependency>
         <dependency>
             <groupId>com.cyberglint</groupId>
-            <artifactId>common</artifactId>
+            <artifactId>coelectron-common</artifactId>
         </dependency>
     </dependencies>
 
