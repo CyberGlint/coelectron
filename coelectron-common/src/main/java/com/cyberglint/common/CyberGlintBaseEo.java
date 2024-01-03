@@ -7,6 +7,10 @@ import java.util.Date;
 @Data
 public class CyberGlintBaseEo {
     /**
+     * id
+     */
+    private Long id;
+    /**
      * 创建时间
      */
     private Date createTime;
