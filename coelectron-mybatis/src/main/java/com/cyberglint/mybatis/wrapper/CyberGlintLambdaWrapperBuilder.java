@@ -1,4 +1,4 @@
-package com.cyberglint.mybatis.util;
+package com.cyberglint.mybatis.wrapper;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.support.SFunction;
