@@ -59,8 +59,7 @@
         </dependency>
         <dependency>
             <groupId>com.cyberglint</groupId>
-            <artifactId>coelectron-data-object</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <artifactId>coelectron-common</artifactId>
         </dependency>
     </dependencies>
 </project>

@@ -1,4 +1,4 @@
-package com.cyberglint.dataobject.response;
+package com.cyberglint.common.response;
 import lombok.Data;
 
 import java.util.EnumSet;

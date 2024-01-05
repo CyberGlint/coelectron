@@ -3,7 +3,8 @@ package com.cyberglint.springboot.exception;
 
 
 
-import com.cyberglint.dataobject.response.CyberGlintRestResponse;
+import com.cyberglint.common.execption.CyberGlintBizException;
+import com.cyberglint.common.response.CyberGlintRestResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.BindingResult;

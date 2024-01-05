@@ -1,4 +1,4 @@
-package com.cyberglint.springboot.exception;
+package com.cyberglint.common.execption;
 
 
 

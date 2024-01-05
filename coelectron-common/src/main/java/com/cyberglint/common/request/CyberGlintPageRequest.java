@@ -1,4 +1,4 @@
-package com.cyberglint.dataobject.request;
+package com.cyberglint.common.request;
 
 
 

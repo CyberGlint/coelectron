@@ -1,4 +1,4 @@
-package com.cyberglint.dataobject.response;
+package com.cyberglint.common.response;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import lombok.AllArgsConstructor;

@@ -1,7 +1,7 @@
 package com.cyberglint.springboot.aop;
 
 import com.alibaba.fastjson.JSON;
-import com.cyberglint.springboot.exception.CyberGlintBizException;
+import com.cyberglint.common.execption.CyberGlintBizException;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;

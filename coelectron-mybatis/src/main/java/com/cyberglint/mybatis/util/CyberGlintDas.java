@@ -3,8 +3,11 @@ package com.cyberglint.mybatis.util;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.cyberglint.common.CyberGlintBaseEo;
+import com.cyberglint.common.eo.CyberGlintBaseEo;
+import com.cyberglint.common.execption.CyberGlintBizException;
 import org.springframework.beans.BeanUtils;
+
+import java.lang.reflect.InvocationTargetException;
 
 /**
  * 基础数据层
@@ -25,14 +28,17 @@ public class CyberGlintDas<M extends BaseMapper<T>, T extends CyberGlintBaseEo> 
      */
     public <V> V convertEntityToVo(T entity, Class<V> voClass) {
         if (entity == null) {
-            return null;
+            // 根据你的需求来处理
+            CyberGlintBizException.throwErrorWithMessage("转换实体为空");
         }
         V vo = null;
         try {
-            vo = voClass.newInstance();
+            vo = voClass.getConstructor().newInstance();
             BeanUtils.copyProperties(entity, vo);
-        } catch (InstantiationException | IllegalAccessException e) {
-            e.printStackTrace(); // 建议使用更合适的错误处理逻辑
+        } catch (InstantiationException | IllegalAccessException | NoSuchMethodException |
+                 InvocationTargetException e) {
+            // 输出堆栈追踪，你可以考虑使用记录框架
+            e.printStackTrace();
         }
         return vo;
     }

@@ -1,4 +1,4 @@
-package com.cyberglint.common;
+package com.cyberglint.common.eo;
 
 import lombok.Data;
 
